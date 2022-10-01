@@ -4,12 +4,13 @@ import time
 
 try:
     browser = webdriver.Chrome()
-    browser.get("http://suninjuly.github.io/huge_form.html")
+    browser.get("http://suninjuly.github.io/find_xpath_form")
+
     elements = browser.find_elements(By.CSS_SELECTOR, "input[type='text']")
     for element in elements:
         element.send_keys("Мой ответ")
 
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+    button = browser.find_element(By.XPATH, "//button[normalize-space()='Submit']")
     button.click()
 
 finally:
