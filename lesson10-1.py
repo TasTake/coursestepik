@@ -25,9 +25,7 @@ try:
     confirm.dismiss()
     
     prompt = browser.switch_to.alert
-    time.sleep(2)
     prompt.send_keys("My answer")
-    time.sleep(2)
     prompt.accept()
     """
 
